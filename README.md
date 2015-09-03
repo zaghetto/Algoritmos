@@ -1,2 +1,4 @@
-# Sinais-e-Sistemas
-Aulas da disciplina Sinais e Sistemas. Departamento de Ciência da Computação - Universidade de Brasília.
+﻿# Algoritmos e Programação de Computadores
+Aulas da disciplina Algoritmos e Programação de Computadores.
+Departamento de Ciência da Computação
+Universidade de Brasília.
