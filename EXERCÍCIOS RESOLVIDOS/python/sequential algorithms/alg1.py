@@ -1,7 +1,7 @@
 # Algoritmo 1
 
 
-def main():
+def mai():
 
     A = int(input("A: "))
     B = int(input("B: "))
