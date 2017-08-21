@@ -8,7 +8,9 @@ def main():
         x = int(input("X? "))
         y = int(input("Y? "))
         soma = 0
-        if x < y:
+        if x == y:
+            print("0")
+        elif x < y:
             for j in range((x + 1), y):
                 if (j % 2) != 0:
                     soma = soma + j
