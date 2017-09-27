@@ -152,6 +152,7 @@ def verifywin(board, player, pos):
 
 
 def verifyRow(player, linha):
+
     print(player)
     print(linha)
 
@@ -159,3 +160,12 @@ def verifyRow(player, linha):
         if linha[0] == player and linha[0] == linha[1] and linha[1] == linha[2]:
             return True
         return False
+
+
+def fullBoard(board):
+
+    for i in range(0, 3):
+        for j in range(0, 3):
+            if board[i][j] == 0:
+                return False
+    return True

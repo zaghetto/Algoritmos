@@ -15,7 +15,6 @@ import titato
 
 def main():
 
-
     # Colors
     cores = [(0.2, 0.6, 0.2), (0.2, 0.2, 0.6)]
 
@@ -54,31 +53,36 @@ def main():
         else:
             radius = 300/numCells
 
-        # Ask for new valid position
-        while True:
+        if not titato.fullBoard(board):
 
-            print("User:" + str(player))
+            # Ask for new valid position
+            while True:
 
-            x = int(input("Type row:"))
-            y = int(input("Type column:"))
+                print("User:" + str(player))
 
-            yertle.setheading(0)
-            pos = [X_Origin + size_board / (2 * numCells) + y*size_board/(numCells),
-                   Y_Origin - size_board / (2 * numCells)-radius - x*size_board/(numCells)]
+                x = int(input("Type row:"))
+                y = int(input("Type column:"))
 
-            if board[x][y] == 0:
-                board[x][y] = player
-                titato.drawSimb(yertle, player, pos, radius, cores[player-1])
-                count += 1
-                if titato.verifywin(board, player, [x, y]):
-                    over = True
-                    print("Victory! Player " + str(player) + "." )
-                break
-            else:
-                print("Posição já ocupara, jogue novamente!")
+                yertle.setheading(0)
+                pos = [X_Origin + size_board / (2 * numCells) + y*size_board/(numCells),
+                       Y_Origin - size_board / (2 * numCells)-radius - x*size_board/(numCells)]
 
-        user += 1
-        print(board)
+                if board[x][y] == 0:
+                    board[x][y] = player
+                    titato.drawSimb(yertle, player, pos, radius, cores[player-1])
+                    count += 1
+                    if titato.verifywin(board, player, [x, y]):
+                        over = True
+                        print("Victory! Player " + str(player) + "." )
+                    break
+                else:
+                    print("Posição já ocupara, jogue novamente!")
+
+            user += 1
+            # print(board)
+        else:
+            over = True
+            print("Empate!")
 
     screen.exitonclick()
 
