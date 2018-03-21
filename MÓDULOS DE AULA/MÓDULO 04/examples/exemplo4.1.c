@@ -1,3 +1,8 @@
+// Alexandre Zaghetto
+// zaghetto@unb.br
+// University of Brasília
+// Department of Computer Science
+
 #include <stdlib.h>
 #include <stdio.h>
 
