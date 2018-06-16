@@ -3,7 +3,7 @@ struct dados
 {
 	char identifier[2];
 	unsigned long int file_size;
-    unsigned long int reserved;
+	unsigned long int reserved;
 	unsigned long int data_offset;
 	unsigned long int header_size;
 	unsigned long int width;
