@@ -37,7 +37,7 @@ fread(&imagem.height,     sizeof(long int),1,arq);
 dados = (unsigned char*)malloc((imagem.data_size)*sizeof(char));
 	
 
-// Ler dados de
+// Ler os valores BGR dos pixels da imagem
 for(i=0;i<imagem.data_size;i++)	{
 
 		fread(&dados[i],  sizeof(char),1,arq);		
